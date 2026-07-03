@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bold & Bright Fancy Shop | Premium Fashion Jewellery</title>
+<meta name="description" content="Discover premium fashion jewellery at Bold & Bright Fancy Shop. Necklaces, earrings, bangles, bridal sets & more. Shop via WhatsApp."/>
+<meta property="og:title" content="Bold & Bright Fancy Shop"/>
+<meta property="og:description" content="Where Style Meets Sparkle – Premium Fashion Jewellery"/>
+<meta property="og:image" content="images/hero-bg.png"/>
+<link rel="icon" href="images/logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <img src="images/logo.png" alt="Logo" class="loader-logo"/>
+    <div class="loader-text">Bold &amp; Bright</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">
+      <img src="images/logo.png" alt="Bold & Bright Logo"/>
+      <span>Bold &amp; Bright</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#categories">Collections</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#all-gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+      <a href="#" id="nav-wa" class="btn-wa-nav" onclick="openWA();return false;"><i class="fab fa-whatsapp"></i></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <!-- Search Bar -->
+  <div id="search-bar" class="search-bar hidden">
+    <input type="text" id="search-input" placeholder="Search jewellery..." autocomplete="off"/>
+    <select id="cat-filter"><option value="">All Categories</option><option value="necklace">Necklace</option><option value="earrings">Earrings</option><option value="bracelet">Bracelet</option><option value="bangle">Bangle</option><option value="ring">Ring</option><option value="chain">Chain</option><option value="anklet">Anklet</option><option value="hair">Hair</option><option value="kids">Kids</option><option value="bridal">Bridal</option></select>
+    <select id="sort-filter"><option value="newest">Newest</option><option value="popular">Popular</option></select>
+    <button onclick="applyFilters()"><i class="fas fa-search"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-bg" style="background-image:url('images/hero-bg.png')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content" data-aos>
+    <div class="hero-badge">✦ New Collection  ✦</div>
+    <img src="images/logo.png" alt="Bold & Bright Logo" class="hero-logo"/>
+    <h1 class="hero-title">Bold &amp; Bright<br/><span>Fancy Shop</span></h1>
+    <p class="hero-tagline">Where Style Meets Sparkle</p>
+    <p class="hero-sub">Discover premium fashion jewellery crafted to make every occasion shine.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">Explore Collection <i class="fas fa-arrow-right"></i></a>
+      <a href="#" class="btn-whatsapp" onclick="openWA();return false;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+    <div class="hero-scroll"><span></span></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <p class="section-label">Why Choose Us</p>
+      <h2 class="section-title">The Bold &amp; Bright Promise</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" data-tilt data-tilt-max="20" data-tilt-scale="1.05" data-tilt-speed="400" data-aos><div class="feat-icon"><i class="fas fa-gem"></i></div><h3>Premium Quality</h3><p>Every piece crafted with the finest materials for lasting elegance.</p></div>
+      <div class="feature-card" data-tilt data-tilt-max="20" data-tilt-scale="1.05" data-tilt-speed="400" data-aos><div class="feat-icon"><i class="fas fa-tag"></i></div><h3>Affordable Luxury</h3><p>Designer looks at prices that celebrate every budget.</p></div>
+      <div class="feature-card" data-tilt data-tilt-max="20" data-tilt-scale="1.05" data-tilt-speed="400" data-aos><div class="feat-icon"><i class="fas fa-wand-magic-sparkles"></i></div><h3>Latest Designs</h3><p>Trend-forward collections updated every season.</p></div>
+      <div class="feature-card" data-tilt data-tilt-max="20" data-tilt-scale="1.05" data-tilt-speed="400" data-aos><div class="feat-icon"><i class="fab fa-whatsapp"></i></div><h3>WhatsApp Ordering</h3><p>Order instantly on WhatsApp — fast, easy, personal.</p></div>
+      <div class="feature-card" data-tilt data-tilt-max="20" data-tilt-scale="1.05" data-tilt-speed="400" data-aos><div class="feat-icon"><i class="fas fa-shield-halved"></i></div><h3>Trusted Shop</h3><p>Thousands of happy customers since we opened.</p></div>
+      <div class="feature-card" data-tilt data-tilt-max="20" data-tilt-scale="1.05" data-tilt-speed="400" data-aos><div class="feat-icon"><i class="fas fa-box-open"></i></div><h3>Beautiful Packaging</h3><p>Gift-ready luxury packaging for every order.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="section section-dark">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <p class="section-label">Shop By</p>
+      <h2 class="section-title">Our Collections</h2>
+    </div>
+    <div class="cat-grid" id="cat-grid">
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="necklace" data-aos><div class="cat-icon">📿</div><h3>Necklace</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="earrings" data-aos><div class="cat-icon">💎</div><h3>Earrings</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="bracelet" data-aos><div class="cat-icon">✨</div><h3>Bracelets</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="bangle" data-aos><div class="cat-icon">⭕</div><h3>Bangles</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="ring" data-aos><div class="cat-icon">💍</div><h3>Rings</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="chain" data-aos><div class="cat-icon">🔗</div><h3>Chains</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="anklet" data-aos><div class="cat-icon">🌟</div><h3>Anklets</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="hair" data-aos><div class="cat-icon">🌸</div><h3>Hair Accessories</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="kids" data-aos><div class="cat-icon">👑</div><h3>Kids Collection</h3></div>
+      <div class="cat-card" data-tilt data-tilt-max="25" data-tilt-scale="1.05" data-tilt-speed="400" data-cat="bridal" data-aos><div class="cat-icon">💒</div><h3>Bridal Collection</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <p class="section-label">Our Gallery</p>
+      <h2 class="section-title">Featured Products</h2>
+    </div>
+    <div class="product-tabs" id="product-tabs">
+      <button class="tab-btn active" data-tab="all">All</button>
+      <button class="tab-btn" data-tab="bestseller">Best Sellers</button>
+      <button class="tab-btn" data-tab="new">New Arrivals</button>
+      <button class="tab-btn" data-tab="trending">Trending</button>
+      <button class="tab-btn" data-tab="featured">Featured</button>
+    </div>
+    <div class="product-grid masonry" id="product-grid"></div>
+    <div class="load-more-wrap"><button id="load-more" class="btn-outline">Load More <i class="fas fa-chevron-down"></i></button></div>
+  </div>
+</section>
+
+
+<!-- ALL PRODUCTS GALLERY -->
+<section id="all-gallery" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <p class="section-label">Full Catalog</p>
+      <h2 class="section-title">All Product Images</h2>
+    </div>
+    <div class="all-gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;">
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_194213628.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_194213628.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_194350627.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_194350627.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_194413746.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_194413746.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_195339335.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_195339335.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_202449921.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_202449921.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_202532800.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_202532800.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_202633005.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_202633005.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_202712318.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_202712318.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_203027515.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_203027515.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_203554367.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_203554367.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_203604847.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_203604847.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_203700166.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_203700166.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_203847281.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_203847281.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_204217879.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_204217879.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/IMG_20260702_204408867.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/IMG_20260702_204408867.jpg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-18%20at%203.41.41%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-18%20at%203.41.41%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-20%20at%2011.54.17%20AM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-20%20at%2011.54.17%20AM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-20%20at%2011.58.13%20AM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-20%20at%2011.58.13%20AM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-20%20at%2011.59.20%20AM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-20%20at%2011.59.20%20AM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-20%20at%2012.00.11%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-20%20at%2012.00.11%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-20%20at%2012.04.08%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-20%20at%2012.04.08%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-22%20at%202.31.03%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-22%20at%202.31.03%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-25%20at%2010.02.52%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-25%20at%2010.02.52%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-25%20at%2010.03.35%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-25%20at%2010.03.35%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-25%20at%2010.04.03%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-25%20at%2010.04.03%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-27%20at%2010.59.02%20AM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-27%20at%2010.59.02%20AM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-28%20at%2011.25.51%20AM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-28%20at%2011.25.51%20AM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-30%20at%202.19.45%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-30%20at%202.19.45%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-30%20at%208.20.44%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-30%20at%208.20.44%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-06-30%20at%208.23.21%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-06-30%20at%208.23.21%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-07-01%20at%2011.44.22%20AM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-07-01%20at%2011.44.22%20AM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-07-02%20at%202.41.15%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-07-02%20at%202.41.15%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-07-02%20at%202.47.42%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-07-02%20at%202.47.42%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-07-02%20at%203.17.06%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-07-02%20at%203.17.06%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-07-02%20at%203.18.15%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-07-02%20at%203.18.15%20PM.jpeg', '_blank')"/></div>
+      <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer;; border: 1px solid rgba(201,168,76,0.2);""><img src="images/WhatsApp%20Image%202026-07-03%20at%2012.07.06%20PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s;" loading="lazy" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('images/WhatsApp%20Image%202026-07-03%20at%2012.07.06%20PM.jpeg', '_blank')"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section section-dark">
+  <div class="container about-container">
+    <div class="about-img" data-aos>
+      <img src="images/about.png" alt="Bold & Bright Store" loading="lazy"/>
+      <div class="about-img-badge">Since 2024</div>
+    </div>
+    <div class="about-content" data-aos>
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Crafted With Passion,<br/>Worn With Pride</h2>
+      <p>At Bold &amp; Bright Fancy Shop, we believe every woman deserves to feel extraordinary. Born from a love of fashion and beauty, we curate the most stunning jewellery pieces — blending timeless elegance with modern trends.</p>
+      <p>Our mission is simple: to make premium quality jewellery accessible to everyone, without compromise on style, quality, or service.</p>
+      <div class="about-counters">
+        <div class="counter-item"><span class="counter" data-target="1000">0</span><span>+</span><p>Happy Customers</p></div>
+        <div class="counter-item"><span class="counter" data-target="5000">0</span><span>+</span><p>Products</p></div>
+        <div class="counter-item"><span class="counter" data-target="2">0</span><span>+</span><p>Years</p></div>
+        <div class="counter-item"><span class="counter" data-target="1000">0</span><span>+</span><p>Orders</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM FEED -->
+<section id="social" class="section section-dark">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <p class="section-label">Follow Us</p>
+      <h2 class="section-title">@geethu1150</h2>
+    </div>
+    <div class="insta-grid" id="insta-grid">
+      <a class="insta-item" href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><img src="images/IMG_20260702_202633005.jpg" alt="Instagram post" loading="lazy"/><div class="insta-overlay"><i class="fab fa-instagram"></i></div></a>
+      <a class="insta-item" href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><img src="images/IMG_20260702_202712318.jpg" alt="Instagram post" loading="lazy"/><div class="insta-overlay"><i class="fab fa-instagram"></i></div></a>
+      <a class="insta-item" href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><img src="images/IMG_20260702_202725455.jpg" alt="Instagram post" loading="lazy"/><div class="insta-overlay"><i class="fab fa-instagram"></i></div></a>
+      <a class="insta-item" href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><img src="images/IMG_20260702_202728131.jpg" alt="Instagram post" loading="lazy"/><div class="insta-overlay"><i class="fab fa-instagram"></i></div></a>
+      <a class="insta-item" href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><img src="images/IMG_20260702_203027515.jpg" alt="Instagram post" loading="lazy"/><div class="insta-overlay"><i class="fab fa-instagram"></i></div></a>
+      <a class="insta-item" href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><img src="images/IMG_20260702_203033554.jpg" alt="Instagram post" loading="lazy"/><div class="insta-overlay"><i class="fab fa-instagram"></i></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP CTA -->
+<section id="wa-section" class="section wa-section">
+  <div class="wa-bg"></div>
+  <div class="container" style="position:relative;z-index:2;text-align:center;" data-aos>
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title" style="color:#fff">Need Help Choosing?</h2>
+    <p style="color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 2rem;">Our team is ready to help you find the perfect piece. Connect with us on WhatsApp!</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="#" class="btn-whatsapp-big" onclick="openWA();return false;"><i class="fab fa-whatsapp"></i> Chat with Us</a>
+      <a href="https://chat.whatsapp.com/IBr0GaZzlm77P6UZSKTRvE?s=cl&amp;p=a&amp;ilr=2" class="btn-whatsapp-big" target="_blank" style="background: var(--dark); color: var(--gold); border: 1px solid var(--gold);"><i class="fas fa-users"></i> Join WhatsApp Group</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-dark">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+    <div class="contact-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+      <div class="contact-info" data-aos>
+
+        <div class="contact-item"><i class="fas fa-phone"></i><div><strong>Phone</strong><p id="c-phone"></p></div></div>
+        <div class="contact-item"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><p id="c-wa"></p></div></div>
+        <div class="contact-item"><i class="fas fa-clock"></i><div><strong> Flexible Hours</strong><p id="c-hw"></p><p id="c-hs"></p></div></div>
+        <div class="contact-socials">
+          <a id="c-ig" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" onclick="openWA();return false;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Logo"/>
+        <h3>Bold &amp; Bright<br/>Fancy Shop</h3>
+        <p>Where Style Meets Sparkle. Premium fashion jewellery for every occasion.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/geethu1150?igsh=Z3o2YnZ0dndiaTF0" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" onclick="openWA();return false;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+      <li><a href="#all-gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="#" onclick="filterCat('necklace')">Necklaces</a></li>
+          <li><a href="#" onclick="filterCat('earrings')">Earrings</a></li>
+          <li><a href="#" onclick="filterCat('bracelet')">Bracelets</a></li>
+          <li><a href="#" onclick="filterCat('bridal')">Bridal</a></li>
+          <li><a href="#" onclick="filterCat('kids')">Kids</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe for exclusive offers and new arrivals.</p>
+        <form class="newsletter-form" onsubmit="newsletterSubmit(event)">
+          <input type="email" placeholder="Your email address" required/>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Bold &amp; Bright Fancy Shop. All rights reserved. Made with <i class="fas fa-heart" style="color:#c9a84c"></i></p>
+    <p style="margin-top: 5px; font-size: 0.85rem; color: rgba(255,255,255,0.6);">Developed by <a href="https://www.instagram.com/v_i_s_h_a_kh?utm_source=qr&amp;igsh=MW1ybXJ6NGdycmk2bA==" target="_blank" style="color: var(--gold); text-decoration: none;">Vishakh</a></p>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="#" class="float-wa" onclick="openWA();return false;" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- BACK TO TOP -->
+<button id="back-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- POPUP OVERLAY -->
+<div id="popup-overlay" class="popup-overlay hidden">
+  <div class="popup-box">
+    <button class="popup-close" id="popup-close"><i class="fas fa-times"></i></button>
+    <div class="popup-inner" id="popup-inner"></div>
+  </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
